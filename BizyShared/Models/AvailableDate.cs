@@ -1,18 +1,20 @@
 ﻿using BizyShared.Models;
 using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace BizyServer.Models
 {
-    public class Like : IModel
+    public class AvailableDate : IModel
     {
         public string Id { get; set; }
 
         public DateTime DateCreated { get; set; }
 
-        public User Liker { get; set; }
+        public User User { get; set; }
+     
+        public DateTime DateAvailable { get; set; }
 
-        public User Liked { get; set; }
     }
 }

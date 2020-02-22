@@ -2,11 +2,15 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace BizyBackEnd.Models
+namespace BizyServer.Models
 {
-    public class Match
+    public class Match : IModel
     {
-        public virtual ICollection<ApplicationUser> Couple { get; set; }
+        public string Id { get; set; }
+
+        public DateTime DateCreated { get; set; }
+
+        public virtual ICollection<ApplicationUserMatch> ApplicationUserMatches { get; set; }
 
         public bool IsActive { get; set; }
 

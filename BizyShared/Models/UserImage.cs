@@ -1,11 +1,16 @@
-﻿using System;
+﻿using BizyShared.Models;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace BizyShared.Models
+namespace BizyServer.Models
 {
-    public class UserImage : Model
+    public class UserImage : IModel
     {
+        public string Id { get; set; }
+
+        public DateTime DateCreated { get; set; }
+
         public virtual User User { get; set; }
 
         public string Url { get; set; }

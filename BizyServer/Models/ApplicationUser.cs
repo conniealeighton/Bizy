@@ -1,11 +1,12 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
-using System.Data.Entity.Spatial;
+using System.ComponentModel.DataAnnotations;
+using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BizyBackEnd.Models
+namespace BizyServer.Models
 {
     public enum Genders
     {
@@ -14,8 +15,10 @@ namespace BizyBackEnd.Models
         NonBinary
     }
 
-    public class ApplicationUser : IdentityUser
+    public class ApplicationUser : IdentityUser, IModel
     {
+        public DateTime DateCreated { get; set; }
+
         public string Name { get; set; }
 
         public string Age { get; set; }
@@ -34,10 +37,14 @@ namespace BizyBackEnd.Models
 
         public int MatchRadius { get; set; }
 
-        public virtual ICollection<Match> Matches { get; set; }
+        public virtual ICollection<ApplicationUserMatch> ApplicationUserMatches { get; set; }
 
         public int Strikes { get; set; }
 
-        public DbGeography LastLocation { get; set; }
+        public System.Data.Entity.Spatial.DbGeography LastLocation { get; set; }
+
+        public bool IsAdmin { get; set; }
+
+        public virtual ICollection<AvailableDate> AvailableDates { get; set; }
     }
 }

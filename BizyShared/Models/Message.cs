@@ -1,12 +1,17 @@
-﻿using System;
+﻿using BizyShared.Models;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace BizyShared.Models
+namespace BizyServer.Models
 {
-    public class Message
+    public class Message : IModel
     {
-        public IEnumerable<User> Match { get; set; }
+        public string Id { get; set; }
+
+        public DateTime DateCreated { get; set; }
+
+        public virtual ICollection<User> Match { get; set; }
 
         public User Sender { get; set; }
 

@@ -2,10 +2,14 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace BizyBackEnd.Models
+namespace BizyServer.Models
 {
-    public class Message
+    public class Message : IModel
     {
+        public string Id { get; set; }
+
+        public DateTime DateCreated { get; set; }
+
         public virtual ICollection<ApplicationUser> Match { get; set; }
 
         public ApplicationUser Sender { get; set; }
