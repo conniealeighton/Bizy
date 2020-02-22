@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace BizyShared.Models
+namespace BizyBackEnd.Models
 {
     public class Message
     {
-        public IEnumerable<User> Match { get; set; }
+        public virtual ICollection<ApplicationUser> Match { get; set; }
 
-        public User Sender { get; set; }
+        public ApplicationUser Sender { get; set; }
 
         public string Content { get; set; }
 

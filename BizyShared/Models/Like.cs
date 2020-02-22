@@ -4,7 +4,10 @@ using System.Text;
 
 namespace BizyShared.Models
 {
-    class Like
+    public class Like
     {
+        public User Liker { get; set; }
+
+        public User Liked { get; set; }
     }
 }

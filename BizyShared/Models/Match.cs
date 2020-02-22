@@ -6,10 +6,10 @@ namespace BizyShared.Models
 {
     public class Match
     {
-        public ICollection<User> Couple { get; set; }
+        public IEnumerable<User> Couple { get; set; }
 
         public bool IsActive { get; set; }
 
-        public ICollection<Message> Messages { get; set; }
+        public IEnumerable<Message> Messages { get; set; }
     }
 }
