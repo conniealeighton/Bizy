@@ -28,7 +28,7 @@ namespace BizyServer
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<BizyDbContext>(options =>
-            options.UseSqlServer(Configuration.GetConnectionString("BizyDbContext")));
+            options.UseSqlServer(Configuration.GetConnectionString("BizyDbContext"), x => x.UseNetTopologySuite()));
             Configuration.GetConnectionString("DefaultConnection");
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<BizyDbContext>();

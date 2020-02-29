@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using NetTopologySuite.Geometries;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -43,7 +44,7 @@ namespace BizyServer.Models
 
         public int Strikes { get; set; }
 
-       // public DbGeography LastLocation { get; set; }
+        public Point LastLocation { get; set; }
 
         public bool IsAdmin { get; set; }
 

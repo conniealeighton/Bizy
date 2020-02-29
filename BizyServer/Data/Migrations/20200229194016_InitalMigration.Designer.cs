@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BizyServer.Data.Migrations
 {
     [DbContext(typeof(BizyDbContext))]
-    [Migration("20200223104740_InitalCreate")]
-    partial class InitalCreate
+    [Migration("20200229194016_InitalMigration")]
+    partial class InitalMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

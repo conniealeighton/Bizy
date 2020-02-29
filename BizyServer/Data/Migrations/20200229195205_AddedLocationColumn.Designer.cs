@@ -4,15 +4,17 @@ using BizyServer.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NetTopologySuite.Geometries;
 
 namespace BizyServer.Data.Migrations
 {
     [DbContext(typeof(BizyDbContext))]
-    partial class BizyDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200229195205_AddedLocationColumn")]
+    partial class AddedLocationColumn
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
