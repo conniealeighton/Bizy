@@ -8,7 +8,7 @@ namespace BizyServer.Models
     public interface IModel
     {
         [Key]
-        string Id {get; set;}
+        Guid Id {get; set;}
 
         [DataType(DataType.DateTime)]
         DateTime DateCreated { get; set; }

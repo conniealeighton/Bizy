@@ -8,7 +8,7 @@ namespace BizyServer.Models
 {
     public class AvailableDate : IModel
     {
-        public string Id { get; set; }
+        public Guid Id { get; set; }
 
         public DateTime DateCreated { get; set; }
 

@@ -6,7 +6,7 @@ namespace BizyServer.Models
 {
     public class Match : IModel
     {
-        public string Id { get; set; }
+        public Guid Id { get; set; }
 
         public DateTime DateCreated { get; set; }
 

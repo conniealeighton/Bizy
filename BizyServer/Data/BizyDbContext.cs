@@ -15,6 +15,7 @@ namespace BizyServer.Data
         }
 
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
+        public DbSet<ApplicationUserMatch> ApplicationUserMatches { get; set; }
         public DbSet<UserReport> UserReports { get; set; }
         public DbSet<UserImage> UserImages { get; set; }
         public DbSet<Message> Messages { get; set; }

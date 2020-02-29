@@ -13,7 +13,7 @@ namespace BizyShared.Models
 
     public class User : IModel
     {
-        public string Id { get; set; }
+        public Guid Id { get; set; }
 
         public DateTime DateCreated { get; set; }
 

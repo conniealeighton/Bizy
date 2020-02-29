@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Data;
+using System.Data.Entity.Spatial;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -15,8 +16,9 @@ namespace BizyServer.Models
         NonBinary
     }
 
-    public class ApplicationUser : IdentityUser, IModel
+    public class ApplicationUser : IdentityUser<Guid>, IModel
     {
+
         public DateTime DateCreated { get; set; }
 
         public string Name { get; set; }
@@ -41,7 +43,7 @@ namespace BizyServer.Models
 
         public int Strikes { get; set; }
 
-        public System.Data.Entity.Spatial.DbGeography LastLocation { get; set; }
+       // public DbGeography LastLocation { get; set; }
 
         public bool IsAdmin { get; set; }
 
